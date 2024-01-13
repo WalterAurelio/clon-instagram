@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import './base/normalize';
+@import './base/variables';
+@import './base/mixins';
+@import './base/global';

@@ -1,6 +1,4 @@
-import logo from './logo.svg';
-import Story from './components/Story';
-import { aurelio, lujan, ezequiel, tim, araceli, valentina, valeria, luciana } from './objects/Personas';
+import ContenedorStories from './components/ContenedorStories';
 
 function App() {
   return (
@@ -25,16 +23,7 @@ function App() {
       </header>
 
       <main>
-        <div className='contenedor-stories'>
-          <Story persona={aurelio} />
-          <Story persona={lujan} />
-          <Story persona={ezequiel} />
-          <Story persona={tim} />
-          <Story persona={araceli} />
-          <Story persona={valentina} />
-          <Story persona={valeria} />
-          <Story persona={luciana} />
-        </div>
+        <ContenedorStories />
       </main>
       
       <aside>

@@ -2,6 +2,7 @@ const {src, series, dest, watch} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
+const rename = require('gulp-rename');
 
 function compilarSass() {
   return src('./src/scss/index.scss')
@@ -12,13 +13,14 @@ function compilarSass() {
 function minImagenes() {
   return src('./src/img/*')
     .pipe(imagemin())
-    .pipe(dest('./src/img-min'))
+    .pipe(rename({ suffix: '-min' }))
+    .pipe(dest('./src/img'))
 }
 
 function webpImagenes() {
-  return src('./src/img-min/*')
+  return src('./src/img/*-min.jpg')
     .pipe(webp())
-    .pipe(dest('./src/img-min'))
+    .pipe(dest('./src/img'))
 }
 
 function watchArchivos() {

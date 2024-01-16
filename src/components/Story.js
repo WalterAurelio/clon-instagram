@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Story(props) {
-    
+
   const nombreUsuario = () => {
     let nombreUsuario = props.persona.usuario;
     if (nombreUsuario.length > 10) {

@@ -1,41 +1,39 @@
-const aurelio = {
+export const aurelio = {
     usuario: 'woltergg22',
-    imagen: require('../img/imagen-woltergg22.jpg')
+    imagen: require('../img/imagen-aurelio-min.webp')
 }
 
-const lujan = {
+export const lujan = {
     usuario: 'mariaa.chocobar',
-    imagen: require('../img/imagen-mariaa-chocobar.jpg')
+    imagen: require('../img/imagen-lujan-min.webp')
 }
 
-const ezequiel = {
+export const ezequiel = {
     usuario: 'marmotagram',
-    imagen: require('../img/imagen-marmotagram.jpg')
+    imagen: require('../img/imagen-ezequiel-min.webp')
 }
 
-const tim = {
+export const timdessaint = {
     usuario: 'timdessaint',
-    imagen: require('../img/imagen-tim.jpg')
+    imagen: require('../img/imagen-timdessaint-min.webp')
 }
 
-const araceli = {
+export const araceli = {
     usuario: 'anahi.arts',
-    imagen: require('../img/imagen-anahi-arts.webp')
+    imagen: require('../img/imagen-araceli-min.webp')
 }
 
-const valentina = {
+export const valentina = {
     usuario: 'valenfgallo',
-    imagen: require('../img/imagen-valentina.jpg')
+    imagen: require('../img/imagen-valentina-min.webp')
 }
 
-const valeria = {
+export const valeria = {
     usuario: 'valeria.ramos.py',
-    imagen: require('../img/imagen-valeria.jpg')
+    imagen: require('../img/imagen-valeria-min.webp')
 }
 
-const luciana = {
-    usuario: 'lucianayanina_val',
-    imagen: require('../img/imagen-luciana.png')
+export const facundo = {
+    usuario: 'facu_ramirez10',
+    imagen: require('../img/imagen-facundo-min.webp')
 }
-
-export { aurelio, lujan, ezequiel, tim, araceli, valentina, valeria, luciana };

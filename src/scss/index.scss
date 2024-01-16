@@ -16,3 +16,8 @@ code {
 @import './base/variables';
 @import './base/mixins';
 @import './base/global';
+
+@import './components/App';
+@import './layout/header';
+@import './layout/main';
+@import './components/story';

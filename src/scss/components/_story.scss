@@ -1,0 +1,15 @@
+.contenedor-story {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+
+    .imagen-story {
+        object-fit: cover;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        margin-bottom: .5rem;
+    }
+}

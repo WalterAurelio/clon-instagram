@@ -1,0 +1,15 @@
+.App {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+}
+
+main {
+    .contenedor-stories {
+        max-width: 65rem;
+        margin: 0 auto;
+        padding: $separacion;
+        display: flex;
+        justify-content: space-between;
+    }
+}

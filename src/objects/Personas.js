@@ -1,6 +1,13 @@
+import img0 from '../img/test-img-1.jpg';
+import img1 from '../img/test-img-2.jpg';
+import img2 from '../img/test-img-3.jpg';
+//import img3 from '../img/test-img-4.jpg';
+//import img4 from '../img/test-img-5.jpg';
+
 export const aurelio = {
     usuario: 'woltergg22',
-    imagen: require('../img/imagen-aurelio-min.webp')
+    imagen: require('../img/imagen-aurelio-min.webp'),
+    publicacion: [img0, img1, img2]
 }
 
 export const lujan = {

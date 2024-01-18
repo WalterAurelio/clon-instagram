@@ -3,39 +3,47 @@ import Story from './Story';
 import { aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria, facundo } from '../objects/Personas';
 
 function ContenedorStories() {
+
   const scrollRight = () => {
-    const contenedor = document.querySelector('.contenedor-stories');
-    contenedor.scrollBy(304, 0);
+    const contenedor = document.querySelector('.stories');
+    contenedor.scrollBy({
+      left: 325,
+      behavior: 'smooth'
+    });
   }
 
   const scrollLeft = () => {
-    const contenedor = document.querySelector('.contenedor-stories');
-    contenedor.scrollBy(-304, 0);
+    const contenedor = document.querySelector('.stories');
+    contenedor.scrollBy({
+      left: -325,
+      behavior: 'smooth'
+    });
   }
 
   return(
-    <div className='contenedor-stories-gen'>
-      <div className='aux'>
-        <button className='scrollD' onClick={scrollRight}>D</button>
-        <button className='scrollI' onClick={scrollLeft}>I</button>
+    <div className='contenedor-stories'>      
+      <div className='stories'>
+        <Story persona={aurelio} />
+        <Story persona={lujan} />
+        <Story persona={ezequiel} />
+        <Story persona={timdessaint} />
+        <Story persona={araceli} />
+        <Story persona={valentina} />
+        <Story persona={valeria} />
+        <Story persona={facundo} />
+        <Story persona={aurelio} />
+        <Story persona={lujan} />
+        <Story persona={ezequiel} />
+        <Story persona={timdessaint} />
+        <Story persona={araceli} />
+        <Story persona={valentina} />
+        <Story persona={valeria} />
+        <Story persona={facundo} />
       </div>
-      <div className='contenedor-stories'>
-        <Story persona={aurelio} />
-        <Story persona={lujan} />
-        <Story persona={ezequiel} />
-        <Story persona={timdessaint} />
-        <Story persona={araceli} />
-        <Story persona={valentina} />
-        <Story persona={valeria} />
-        <Story persona={facundo} />
-        <Story persona={aurelio} />
-        <Story persona={lujan} />
-        <Story persona={ezequiel} />
-        <Story persona={timdessaint} />
-        <Story persona={araceli} />
-        <Story persona={valentina} />
-        <Story persona={valeria} />
-        <Story persona={facundo} />
+
+      <div className='botones'>
+        <button className='boton boton-derecha' onClick={scrollRight}>&gt;</button>
+        <button className='boton boton-izquierda' onClick={scrollLeft}>&lt;</button>
       </div>
     </div>
   );

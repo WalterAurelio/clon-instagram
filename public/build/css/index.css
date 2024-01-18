@@ -343,14 +343,6 @@ h1, h2, h3 {
   grid-template-columns: 20% 55% 25%;
 }
 
-main .contenedor-stories {
-  max-width: 65rem;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 header {
   height: 100%;
 }
@@ -378,14 +370,47 @@ header {
   background-color: aqua;
 }
 
-.contenedor-story {
+.stories {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.botones {
+  position: relative;
+  width: 65rem;
+  margin: 0 auto;
+}
+.botones .boton {
+  border: none;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+}
+.botones .boton-derecha {
+  position: absolute;
+  top: -80px;
+  right: 10px;
+}
+.botones .boton-izquierda {
+  position: absolute;
+  top: -80px;
+  left: 10px;
+}
+
+.usuario-story {
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
+  min-width: 8.125rem;
 }
-.contenedor-story .imagen-story {
+.usuario-story .imagen-story {
   object-fit: cover;
   height: 6rem;
   width: 6rem;

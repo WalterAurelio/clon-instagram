@@ -2,39 +2,4 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 20% 55% 25%;
-    overflow: scroll;
-}
-
-main {
-    .contenedor-stories {
-        max-width: 65rem;
-        margin: 0 auto;
-        padding: $separacion;
-        display: flex;
-        //flex-wrap: nowrap;
-        justify-content: space-between;
-        overflow-x: hidden;
-        position: relative;
-    }
-
-    .scrollD {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-    }
-
-    .scrollI {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-
-    }
-
-    .aux {
-        position: relative;
-        width: 65rem;
-        margin: 0 auto;
-        z-index: 1;
-    }
 }

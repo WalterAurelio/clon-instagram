@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Story(props) {
+function Story({ persona }) {
 
   const nombreUsuario = () => {
-    let nombreUsuario = props.persona.usuario;
+    let nombreUsuario = persona.usuario;
     if (nombreUsuario.length > 10) {
       nombreUsuario = `${nombreUsuario.slice(0, 8)}...`;
     }
@@ -11,11 +11,11 @@ function Story(props) {
   }
 
   return (
-    <a className='contenedor-story' href='#'>
+    <a className='usuario-story' href='#'>
       <img
         className='imagen-story'
-        src={props.persona.imagen}
-        alt={`Foto de ${props.persona.usuario}`}
+        src={persona.imagen}
+        alt={`Foto de ${persona.usuario}`}
       />
       {nombreUsuario()}
     </a>

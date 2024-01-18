@@ -1,0 +1,39 @@
+.stories {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: $separacion 0;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.botones {
+    position: relative;
+    width: 65rem;
+    margin: 0 auto;
+
+    .boton {
+        border: none;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        text-align: center;
+    }
+
+    .boton-derecha {
+        position: absolute;
+        top: -80px;
+        right: 10px;
+    }
+
+    .boton-izquierda {
+        position: absolute;
+        top: -80px;
+        left: 10px;
+    }
+}
+
+
+
+
+

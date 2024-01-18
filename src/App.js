@@ -1,9 +1,11 @@
 import ContenedorStories from './components/ContenedorStories';
+import SliderImagenes from './components/SliderImagenes';
+import { aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria, facundo } from './objects/Personas';
 
 function App() {
   return (
     <div className="App">
-      <header>
+      <header className='header'>
         <div className='contenedor-header'>
           <h1>Instagram</h1>
 
@@ -22,8 +24,10 @@ function App() {
         </div>
       </header>
 
-      <main>
+      <main className='main'>
         <ContenedorStories />
+
+        <SliderImagenes persona={aurelio} />
       </main>
       
       <aside>

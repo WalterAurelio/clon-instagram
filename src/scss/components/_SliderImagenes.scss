@@ -1,0 +1,15 @@
+.slider {
+    max-width: 45rem;
+    margin: 0 auto;
+}
+
+.contenedor-imagenes {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}

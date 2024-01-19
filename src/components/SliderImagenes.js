@@ -1,46 +1,30 @@
-import React, { useState, useTransition } from 'react';
+import React, { useState } from 'react';
 
 function SliderImagenes({ persona }) {
   
   const [numDeFoto, setNumDeFoto] = useState(0);
+  const [claseIzq, setClaseIzq] = useState('oculto');
+  const [claseDer, setClaseDer] = useState('');
 
-  const [estadoDisabled, setEstadoDisabled] = useState(true);
-
-  function deslizarIzquierda() {
-    if (numDeFoto - 1 > -1) {
-      setNumDeFoto(numDeFoto - 1);
-      const img = document.querySelector(`.img${numDeFoto - 1}`);
+  function handleClick(num) {
+    if (numDeFoto + num > -1 && numDeFoto + num < persona.publicacion.length) {
+      const img = document.querySelector(`.img${numDeFoto + num}`);
       img.scrollIntoView({
         behavior: 'smooth'
       });
-
-      const botonDerecha = document.querySelector('.derecha');
-      botonDerecha.removeAttribute('disabled');
-    }
-    
-    if (numDeFoto - 2 <= -1) {
-      const botonIzquierda = document.querySelector('.izquierda');
-      botonIzquierda.setAttribute('disabled', '');
+      setNumDeFoto(numDeFoto + num);
+      ocultarSi(num);
     }
   }
 
-  function deslizarDerecha() {
-    if (numDeFoto + 1 < persona.publicacion.length) {
-      setNumDeFoto(numDeFoto + 1);
-      const img = document.querySelector(`.img${numDeFoto + 1}`);
-      img.scrollIntoView({
-        behavior: 'smooth'
-      });
-
-      setEstadoDisabled(false);
-      const botonIzquierda = document.querySelector('.izquierda');
-      botonIzquierda.removeAttribute('disabled');
-    }
-    
-    
-    if (numDeFoto + 2 >= persona.publicacion.length) {
-      const botonDerecha = document.querySelector('.derecha');
-      botonDerecha.setAttribute('disabled', '')
+  function ocultarSi(num) {
+    if (numDeFoto + (2 * num) == -1) {
+      setClaseIzq('oculto');
+    } else if (numDeFoto + (2 * num) == persona.publicacion.length) {
+      setClaseDer('oculto');
+    } else {
+      setClaseDer('');
+      setClaseIzq('');
     }
   }
 
@@ -53,8 +37,8 @@ function SliderImagenes({ persona }) {
       </div>
 
       <div className='contenedor-botones'>
-        <button disabled={estadoDisabled} className='boton izquierda' onClick={deslizarIzquierda}>I</button>
-        <button className='boton derecha' onClick={deslizarDerecha}>D</button>
+        <button className={`izquierda ${claseIzq}`} onClick={() => handleClick(-1)}>&lt;</button>
+        <button className={`derecha ${claseDer}`} onClick={() => handleClick(1)}>&gt;</button>
       </div>
     </div>
   );

@@ -1,6 +1,17 @@
 .slider {
     max-width: 45rem;
     margin: 0 auto;
+    position: relative;
+
+    .contenedor-botones {
+        position: absolute;
+        top: 300px;
+        display: flex;
+
+        .oculto {
+            z-index: -2;
+        }
+    }
 }
 
 .contenedor-imagenes {

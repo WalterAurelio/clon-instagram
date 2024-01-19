@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Story({ persona }) {
+function Story({ id, persona }) {
 
   const nombreUsuario = () => {
     let nombreUsuario = persona.usuario;
@@ -11,7 +11,7 @@ function Story({ persona }) {
   }
 
   return (
-    <a className='usuario-story' href='#'>
+    <a id={id} className='usuario-story' href='#'>
       <img
         className='imagen-story'
         src={persona.imagen}

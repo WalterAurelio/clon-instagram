@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 function SliderImagenes({ persona }) {
   
   const [numDeFoto, setNumDeFoto] = useState(0);
   const [claseIzq, setClaseIzq] = useState('oculto');
   const [claseDer, setClaseDer] = useState('');
+  const [classIndicador, setClassIndicador] = useState('activo');
 
   function handleClick(num) {
     if (numDeFoto + num > -1 && numDeFoto + num < persona.publicacion.length) {
@@ -37,8 +40,17 @@ function SliderImagenes({ persona }) {
       </div>
 
       <div className='contenedor-botones'>
-        <button className={`izquierda ${claseIzq}`} onClick={() => handleClick(-1)}>&lt;</button>
-        <button className={`derecha ${claseDer}`} onClick={() => handleClick(1)}>&gt;</button>
+        <IoIosArrowDropleftCircle className={`boton ${claseIzq}`} onClick={() => handleClick(-1)} />
+        <IoIosArrowDroprightCircle className={`boton ${claseDer}`} onClick={() => handleClick(1)} />
+      </div>
+
+      <div className='auxiliar'>
+        <div className='contenedor-indicadores'>
+          {
+            persona.publicacion.map(foto => 
+              <div id={persona.publicacion.indexOf(foto)} className={`indicador ${numDeFoto == persona.publicacion.indexOf(foto) ? 'activo' : ''}`}></div>)
+          }
+        </div>
       </div>
     </div>
   );

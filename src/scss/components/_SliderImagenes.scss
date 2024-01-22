@@ -3,24 +3,59 @@
     margin: 0 auto;
     position: relative;
 
-    .contenedor-botones {
-        position: absolute;
-        top: 300px;
+    .contenedor-imagenes {
+        // width: 100%;
         display: flex;
-
-        .oculto {
-            z-index: -2;
+        overflow-x: hidden;
+        background-color: black;
+    
+        img {
+            width: 100%;
+            object-fit: contain;
         }
     }
-}
 
-.contenedor-imagenes {
-    width: 100%;
-    display: flex;
-    overflow-x: hidden;
-
-    img {
+    .contenedor-botones {
+        position: absolute;
+        top: calc(60rem / 2);
         width: 100%;
-        object-fit: contain;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        .boton {
+            height: 2.75rem;
+            width: 2.75rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .boton.oculto {
+            z-index: -1;
+        }
     }
+
+    .auxiliar {
+        position: absolute;
+        width: 100%;
+        bottom: 1.5rem;
+
+        .contenedor-indicadores {
+            max-width: 7%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+    
+            .indicador {
+                width: .7rem;
+                height: .7rem;
+                border-radius: 50%;
+                background-color: rgba(204, 206, 208, 0.6);
+            }
+    
+            .indicador.activo {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+
 }

@@ -39,18 +39,14 @@ function SliderImagenes({ persona }) {
         }
       </div>
 
-      <div className='contenedor-botones'>
-        <IoIosArrowDropleftCircle className={`boton ${claseIzq}`} onClick={() => handleClick(-1)} />
-        <IoIosArrowDroprightCircle className={`boton ${claseDer}`} onClick={() => handleClick(1)} />
-      </div>
+      <IoIosArrowDropleftCircle className={`boton-slider izquierda ${claseIzq}`} onClick={() => handleClick(-1)} />
+      <IoIosArrowDroprightCircle className={`boton-slider derecha ${claseDer}`} onClick={() => handleClick(1)} />
 
-      <div className='auxiliar'>
-        <div className='contenedor-indicadores'>
-          {
-            persona.publicacion.map(foto => 
-              <div id={persona.publicacion.indexOf(foto)} className={`indicador ${numDeFoto == persona.publicacion.indexOf(foto) ? 'activo' : ''}`}></div>)
-          }
-        </div>
+      <div className='contenedor-indicadores'>
+        {
+          persona.publicacion.map(foto => 
+            <div id={persona.publicacion.indexOf(foto)} className={`indicador ${numDeFoto == persona.publicacion.indexOf(foto) ? 'activo' : ''}`}></div>)
+        }
       </div>
     </div>
   );

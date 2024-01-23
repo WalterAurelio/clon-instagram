@@ -11,14 +11,16 @@ function Story({ id, persona }) {
   }
 
   return (
-    <a id={id} className='usuario-story' href='#'>
-      <img
-        className='imagen-story'
-        src={persona.imagen}
-        alt={`Foto de ${persona.usuario}`}
-      />
-      {nombreUsuario()}
-    </a>
+    <div id={id} className='contenedor-story'>
+      <a href='#'>
+        <img
+          className='imagen-story'
+          src={persona.imagen}
+          alt={`Foto de ${persona.usuario}`}
+        />
+      </a>
+      <a href='#' className='usuario-story'>{nombreUsuario()}</a>
+    </div>
   );
 }
 

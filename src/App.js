@@ -26,7 +26,6 @@ function App() {
 
       <main className='main'>
         <ContenedorStories />
-
         <SliderImagenes persona={aurelio} />
       </main>
       

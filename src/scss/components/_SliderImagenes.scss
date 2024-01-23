@@ -12,50 +12,52 @@
         img {
             width: 100%;
             object-fit: contain;
+            user-select: none;
         }
     }
 
-    .contenedor-botones {
+    .boton-slider {
         position: absolute;
-        top: calc(60rem / 2);
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1rem;
-
-        .boton {
-            height: 2.75rem;
-            width: 2.75rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .boton.oculto {
-            z-index: -1;
-        }
+        top: 50%;
+        height: 2.8rem;
+        width: 2.8rem;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
     }
 
-    .auxiliar {
-        position: absolute;
-        width: 100%;
-        bottom: 1.5rem;
-
-        .contenedor-indicadores {
-            max-width: 7%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-    
-            .indicador {
-                width: .7rem;
-                height: .7rem;
-                border-radius: 50%;
-                background-color: rgba(204, 206, 208, 0.6);
-            }
-    
-            .indicador.activo {
-                background-color: rgba(255, 255, 255, 0.8);
-            }
-        }
+    .boton-slider.izquierda {
+        left: 2%;
     }
 
+    .boton-slider.derecha {
+        right: 2%;
+    }
+
+    .boton-slider.oculto {
+        z-index: -1;
+    }
+}
+
+.contenedor-indicadores {
+    position: absolute;
+    width: 100%;
+    bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+    .indicador {
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        background-color: rgba(204, 206, 208, 0.6);
+        margin-right: .5rem;
+    }
+
+    .indicador:last-of-type {
+        margin: 0;
+    }
+
+    .indicador.activo {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
 }

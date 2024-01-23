@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Story from './Story';
 import { aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria, facundo } from '../objects/Personas';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 function ContenedorStories() {
 
@@ -41,7 +43,7 @@ function ContenedorStories() {
   }
 
   return(
-    <div className='contenedor-stories'>      
+    <div className='contenedor-stories'>
       <div className='stories'>
         {
           arreglo.map(persona => 
@@ -68,11 +70,9 @@ function ContenedorStories() {
           )
         }
       </div>
-
-      <div className='botones'>
-        <button className={`boton boton-derecha ${classDer}`} onClick={() => hacerScroll(1)}>&gt;</button>
-        <button className={`boton boton-izquierda ${classIzq}`} onClick={() => hacerScroll(-1)}>&lt;</button>
-      </div>
+      
+      <IoIosArrowDropleftCircle className={`boton-story izquierda ${classIzq}`} onClick={() => hacerScroll(-1)} />
+      <IoIosArrowDroprightCircle className={`boton-story derecha ${classDer}`} onClick={() => hacerScroll(1)} />
     </div>
   );
 }

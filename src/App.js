@@ -1,5 +1,6 @@
 import ContenedorStories from './components/ContenedorStories';
 import SliderImagenes from './components/SliderImagenes';
+import Publicacion from './components/Publicacion';
 import { aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria, facundo } from './objects/Personas';
 
 function App() {
@@ -25,11 +26,12 @@ function App() {
       </header>
 
       <main className='main'>
-        <ContenedorStories />
-        <SliderImagenes persona={aurelio} />
+        <ContenedorStories persona={aurelio} />
+
+        <Publicacion persona={aurelio} />
       </main>
       
-      <aside>
+      <aside className='aside'>
         <div className='contenedor-main'>
         </div>
       </aside>

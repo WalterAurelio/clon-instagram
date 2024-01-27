@@ -1,5 +1,23 @@
 .App {
     height: 100vh;
-    display: grid;
-    grid-template-columns: 20% 55% 25%;
+    display: flex;
+
+    h1 {
+        font-family: $fuenteLogo;
+        font-size: 3.5rem;
+    }
+
+    .header {
+        max-width: 33.5rem;
+        flex: 1;
+    }
+
+    .main {
+        max-width: 63rem;
+        flex: 1;
+    }
+
+    .aside {
+        // flex: 1;
+    }
 }

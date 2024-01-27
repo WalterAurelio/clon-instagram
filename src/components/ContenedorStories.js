@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
 import Story from './Story';
-import { aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria, facundo } from '../objects/Personas';
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-function ContenedorStories() {
+function ContenedorStories({ persona }) {
 
-  // const arreglo = [aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria, facundo];
-  const arreglo = [aurelio, lujan, ezequiel, timdessaint, araceli, valentina, valeria];
-  const arregloLength = 21;
-
+  const storiesAmigos = persona.amigos;
   const [nroStory, setNroStory] = useState(3.5);
   const [classIzq, setClassIzq] = useState('oculto');
   const [classDer, setClassDer] = useState('');
 
   function ocultarSi(num) {
-    if (nroStory + (8 * num) >= arregloLength - 1) {
+    if (nroStory + (8 * num) >= storiesAmigos.length - 1) {
       setClassDer('oculto');
     } else if (nroStory + (8 * num) <= 0) {
       setClassIzq('oculto');
@@ -26,17 +22,18 @@ function ContenedorStories() {
   }
 
   function limiteQueInteresa(num) {
-    return Math.max((arregloLength - 1) * num, 0);
+    return Math.max((storiesAmigos.length - 1) * num, 0);
   }
 
   function posibleCentro(num) {
-    return Math.max((arregloLength - 1) * num - 3.5, 3.5);
+    return Math.max((storiesAmigos.length - 1) * num - 3.5, 3.5);
   }
 
   const hacerScroll = (num) => {
     const story = document.getElementById(`${num > 0 ? Math.min(limiteQueInteresa(num), nroStory + (num * 7.5)) : Math.max(limiteQueInteresa(num), nroStory + (num * 7.5))}`);
     story.scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'center'
     });
     setNroStory((num > 0 ? Math.min(posibleCentro(num), nroStory + (num * 4)) : Math.max(posibleCentro(num), nroStory + (num * 4))));
     ocultarSi(num);
@@ -46,26 +43,10 @@ function ContenedorStories() {
     <div className='contenedor-stories'>
       <div className='stories'>
         {
-          arreglo.map(persona => 
+          storiesAmigos.map(persona => 
             <Story
-              key={arreglo.indexOf(persona)}
-              id={arreglo.indexOf(persona)}
-              persona={persona} />
-          )
-        }
-        {
-          arreglo.map(persona => 
-            <Story
-              key={7 + arreglo.indexOf(persona)}
-              id={7 + arreglo.indexOf(persona)}
-              persona={persona} />
-          )
-        }
-        {
-          arreglo.map(persona => 
-            <Story
-              key={14 + arreglo.indexOf(persona)}
-              id={14 + arreglo.indexOf(persona)}
+              key={storiesAmigos.indexOf(persona)}
+              id={storiesAmigos.indexOf(persona)}
               persona={persona} />
           )
         }

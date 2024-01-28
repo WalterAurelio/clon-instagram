@@ -1,19 +1,21 @@
 import React from 'react';
+import { IoIosClose } from "react-icons/io";
 
 function Comentario({ textoComentario, id, eliminarComentario }) {
 
-
   return (
     <article className='contenedor-comentario'>
-      <a href='#' className='usuario-comentario'>woltergg22</a>
-      <p className='texto-comentario'>{textoComentario}</p>
-
-      <p 
+      
+      <p className='texto-comentario'>
+        <a href='#' className='usuario-comentario'>woltergg22</a> {textoComentario}
+      </p>
+      
+      <div 
         className='eliminar-comentario'
         onClick={() => eliminarComentario(id)}
       >
-        x
-      </p>
+        <IoIosClose className='icono-eliminar-comentario' />
+      </div>
     </article>
   );
 }

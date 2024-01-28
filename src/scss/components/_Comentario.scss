@@ -1,0 +1,25 @@
+.contenedor-comentario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0;
+
+    .usuario-comentario {
+        text-decoration: none;
+    }
+
+    .texto-comentario,
+    .eliminar-comentario {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .eliminar-comentario {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

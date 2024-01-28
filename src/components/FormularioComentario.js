@@ -23,13 +23,13 @@ function FormularioComentario(props) {
       className='formulario-comentario'
       onSubmit={manejarEnvio}
     >
-      <input 
+      <textarea
         className='input-comentario'
-        type='text'
         placeholder='Agrega un comentario...'
         name='comentario'
         onChange={manejarCambio}
-      />
+      >
+      </textarea>
       <button className='boton-comentario'>Publicar</button>
     </form>
   );

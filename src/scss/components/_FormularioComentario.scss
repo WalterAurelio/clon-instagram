@@ -1,0 +1,31 @@
+.formulario-comentario {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .8rem;
+
+  .input-comentario {
+    width: 100%;
+    flex: 1;
+    font-size: 1.4rem;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    resize: none;
+  }
+
+  .boton-comentario {
+    border: none;
+    background: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #1b74e4;
+    font-weight: 700;
+
+    &:hover {
+      color: #5faaff;
+    }
+  }
+}

@@ -82,6 +82,10 @@
     justify-content: space-between;
     margin-bottom: .8rem;
 
+    .contenedor-reacciones {
+        display: flex;
+    }
+
     .icono {
         margin-left: 1rem;
         width: 2.4rem;
@@ -93,7 +97,19 @@
         }
     }
 
-    .icono.corazon {
+    .icono-corazon {
         margin-left: 0;
+
+        .corazon {
+            margin-left: 0;
+        }
+
+        .filled {
+            color: red;
+        }
+
+        .icono.oculto {
+            display: none;
+        }
     }
 }
